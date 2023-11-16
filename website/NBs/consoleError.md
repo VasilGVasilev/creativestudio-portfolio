@@ -1,0 +1,2 @@
+There is a console of GET https://vgvweb.com/VasilVasilevCV.pdf.txt 404 on the browser.\
+That is because there is a bug in Next.js 13.3 to add .txt to Link hrefs, thus, such link cannot be found, resulting in the bug.

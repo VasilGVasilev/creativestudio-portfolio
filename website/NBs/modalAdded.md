@@ -1,0 +1,1 @@
+I have added a modal but for it to work we need a global state. This is achievable by usestate and context API, redux or zustand. I chose zustand for this project.
