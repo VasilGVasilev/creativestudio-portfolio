@@ -17,7 +17,9 @@ import { motion } from "framer-motion"
 const LinkTemplate = ({ page, selectedPage, setSelectedPage, setIsMenuToggled, isMenuToggled }) => {
   const lowerCasePage = page.toLowerCase();
   const exitModalToSelectedPage = (lowerCasePage) => {
-    setIsMenuToggled(!isMenuToggled)
+    if(setIsMenuToggled){
+      setIsMenuToggled(!isMenuToggled)
+    }
     setSelectedPage(lowerCasePage)
   }
   return (
