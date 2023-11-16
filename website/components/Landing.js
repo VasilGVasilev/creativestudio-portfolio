@@ -12,11 +12,8 @@ const Landing = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   const openModal = useModal((state) => state.openModal)
   return (
-    <section
-      id="home"
-      className="md:flex md:justify-between md:items-center md:h-full w-full"
-    >
-      <motion.div
+
+      <motion.section
         initial="hidden" 
         whileInView="visible"
         viewport={{ once: true}}
@@ -25,11 +22,13 @@ const Landing = () => {
           hidden: { opacity: 0 },
           visible: { opacity: 1 },
         }}
+        id="home"
+        className="md:flex md:justify-between md:items-center h-full w-full"
       >
-        <img src="/dalia/dalia-three.webp" className="opacity-50" alt="" />
-      </motion.div>
 
-    </section>
+        <img src="/dalia/dalia-three.webp" className="opacity-50" alt="" />
+      </motion.section>
+
   );
 };
 
