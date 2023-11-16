@@ -8,7 +8,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
   const notSelectedStyles = `bg-dark-grey hover:bg-[#facc15] transition duration-200 hover:scale-110 active:scale-110 `
 
   return (
-    <div className="flex flex-col gap-6 fixed top-[60%] right-7">
+    <div className="flex flex-col gap-6 fixed top-[60%] right-7 z-50">
       <Link
         href="#home"
         className={`${selectedPage === "home" ? selectedStyles : notSelectedStyles
