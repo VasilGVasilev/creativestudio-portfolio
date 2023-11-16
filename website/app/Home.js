@@ -45,14 +45,15 @@ export default function Home() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      {isDesktop && (
+        <DotGroup
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
+      )}
+      
+      <div className="mx-auto md:h-full">
 
-      <div className=" mx-auto md:h-full">
-        {isDesktop && (
-          <DotGroup
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-        )}
         <div
           className="mt-50"
           onViewportEnter={() => setSelectedPage("home")}
