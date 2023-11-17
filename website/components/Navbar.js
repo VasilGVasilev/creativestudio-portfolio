@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
 import useMediaQuery from "@/app/hooks/useMediaQuery";
-import { opensans, playfair } from "@/app/utils/fonts";
+import { opensans, playfair, raleway } from "@/app/utils/fonts";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
+import { PiSquaresFour } from "react-icons/pi";
 import { motion } from "framer-motion"
 
 // props: 
@@ -51,7 +52,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <AnchorLink href={'#home'} ><h4 className={`${playfair.className} text-3xl font-bold`}>Creative Studio</h4></AnchorLink>
+        <AnchorLink href={'#home'} ><h4 className={`${raleway.className} text-xl md:text-3xl font-bold`}>Creative Studio</h4></AnchorLink>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
@@ -84,11 +85,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         ) : (
           <button
-            className="rounded-full bg-black p-2"
+            className="rounded-full bg-inherit p-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
             aria-label="Open mobile menu"
           >
-            <AiOutlineMenu size={24} />
+           <PiSquaresFour size={24} />
           </button>
         )}
 

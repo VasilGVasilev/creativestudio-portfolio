@@ -7,6 +7,7 @@ import TechStackIcons from "./TechStackIcons";
 import useModal from "@/app/hooks/useModal";
 import { imageLoader } from "@/app/utils/imgLoader";
 import Image from "next/image";
+import { raleway } from "@/app/utils/fonts";
 
 const Landing = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -23,10 +24,19 @@ const Landing = () => {
           visible: { opacity: 1 },
         }}
         id="home"
-        className="md:flex md:justify-between md:items-center h-full w-full"
+        className="relative"
       >
 
-        <img src="/dalia/dalia-three.webp" className="opacity-50" alt="" />
+        <img src="/dalia/dalia-three.webp" className="h-screen w-full object-cover opacity-50" alt="" />
+        <div className={`${raleway.className} absolute top-1/2 left-5 w-full h-full`}>
+          <span className="font-semibold mb-1">Изберете вашият нов дом</span>
+          <h1 className="font-medium mb-2 flex flex-col">
+            <span>ОТКРИЙТЕ</span>
+            <span>НАЙ-ДОБРОТО ПРЕДЛОЖЕНИЕ</span>
+            <span>ЗА ВАС</span>
+          </h1>
+          <a href="#" className="button">Нашите проекти</a>
+        </div>
       </motion.section>
 
   );
