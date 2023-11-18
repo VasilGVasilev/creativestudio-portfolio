@@ -8,6 +8,7 @@ import useModal from "@/app/hooks/useModal";
 import { imageLoader } from "@/app/utils/imgLoader";
 import Image from "next/image";
 import { raleway } from "@/app/utils/fonts";
+import { BiLogoInstagramAlt } from "react-icons/bi";
 
 const Landing = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -28,15 +29,17 @@ const Landing = () => {
       >
 
         <img src="/dalia/dalia-three.webp" className="h-screen w-full object-cover opacity-50" alt="" />
-        <div className={`${raleway.className} absolute top-1/2 left-5 w-full h-full`}>
-          <span className="font-semibold mb-1">Изберете вашият нов дом</span>
-          <h1 className="font-medium mb-2 flex flex-col">
-            <span>ОТКРИЙТЕ</span>
-            <span>НАЙ-ДОБРОТО ПРЕДЛОЖЕНИЕ</span>
-            <span>ЗА ВАС</span>
-          </h1>
-          <a href="#" className="button">Нашите проекти</a>
+        <div className={`${raleway.className} absolute top-1/2 left-5 w-full h-full text-base ss:text-xl ss:ml-28`}>
+          <span className="font-semibold">Изберете вашият нов дом</span>
+          <div className="font-medium flex flex-col text-3xl ss:text-7xl">
+            <span className="text-shadow-default" >Открийте</span>
+            <span className="text-shadow-default" >Най-Доброто</span>
+            <span className="text-shadow-default" >За Вас</span>
+          </div>
+          <Link href="#" className="mt-10 inline-block bg-sky-dalia text-white px-2 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white ">Нашите проекти</Link>
+          <Link href="#" ><BiLogoInstagramAlt size={28} className="mt-10 transition text-[#F20366] hover:text-white" /></Link>
         </div>
+
       </motion.section>
 
   );

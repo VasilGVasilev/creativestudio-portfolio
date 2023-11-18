@@ -15,6 +15,7 @@ import { motion } from "framer-motion"
 // mobile menu comes as an animation with framer motion
 // may be reverse link to anchor link if not smooth
 // refactor img to Image
+
 const LinkTemplate = ({ page, selectedPage, setSelectedPage, setIsMenuToggled, isMenuToggled }) => {
   const lowerCasePage = page.toLowerCase();
   const exitModalToSelectedPage = (lowerCasePage) => {

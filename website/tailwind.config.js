@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -34,6 +36,7 @@ module.exports = {
         // "project-two": "url('/assets/project-two.webp')",
 
       },
+      
     },
     screens: {
       xs: "480px",
@@ -44,5 +47,6 @@ module.exports = {
       xl: "1700px",
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 }

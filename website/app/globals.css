@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-shadow-default {
+    text-shadow: 2px 4px 8px #ffffff95;
+}
