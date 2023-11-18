@@ -16,29 +16,35 @@ const Landing = () => {
   return (
 
       <motion.section
-        initial="hidden" 
-        whileInView="visible"
-        viewport={{ once: true}}
-        transition={{ duration: 0.1 }}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-        }}
+
         id="home"
         className="relative"
       >
 
         <img src="/dalia/dalia-three.webp" className="h-screen w-full object-cover opacity-50" alt="" />
-        <div className={`${raleway.className} absolute top-1/2 left-5 w-full h-full text-base ss:text-xl ss:ml-28`}>
-          <span className="font-semibold">Изберете вашият нов дом</span>
+        <motion.div 
+          // initial="hidden" 
+          // whileInView="visible"
+          viewport={{ once: true}}
+          // transition={{ duration: 0.8 }}
+          // variants={{
+          //   hidden: { opacity: 0, y: -70 },
+          //   visible: { opacity: 1, y: 0},
+          // }}
+          initial={{ opacity: 0, y: -70 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 100, damping: 30, duration: 1.5 }}
+          className={`${raleway.className} absolute top-1/3 left-5 w-full h-full text-base ss:text-xl ss:ml-28`}
+        >
+          <span className="font-semibold">Създаване на съвършенство</span>
           <div className="font-medium flex flex-col text-3xl ss:text-7xl">
             <span className="text-shadow-default" >Открийте</span>
-            <span className="text-shadow-default" >Най-Доброто</span>
-            <span className="text-shadow-default" >За Вас</span>
+            <span className="text-shadow-default" >Meчтания Дом</span>
+            <span className="text-shadow-default" >Днес</span>
           </div>
-          <Link href="#" className="mt-10 inline-block bg-sky-dalia text-white px-2 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white ">Нашите проекти</Link>
-          <Link href="#" ><BiLogoInstagramAlt size={28} className="mt-10 transition text-[#F20366] hover:text-white" /></Link>
-        </div>
+          <Link href="#" className="mt-10 inline-block bg-sky-dalia text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white ">Нашите проекти</Link>
+          <Link href="#" ><BiLogoInstagramAlt size={28} className="mt-10 transition text-white hover:text-[#F20366]" /></Link>
+        </motion.div>
 
       </motion.section>
 
