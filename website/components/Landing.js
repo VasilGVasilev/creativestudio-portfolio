@@ -16,8 +16,7 @@ const Landing = () => {
   return (
 
       <motion.section
-
-        id="home"
+        id="начало"
         className="relative"
       >
 

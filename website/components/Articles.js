@@ -47,7 +47,7 @@ const Article = ({ title, subtitle, url }) => {
 
 const Articles = () => {
   return (
-    <section id="articles" className="pt-48 pb-48">
+    <section id="инвеститор" className="pt-48 pb-48">
 
       {/* HEADINGS */}
       <motion.div

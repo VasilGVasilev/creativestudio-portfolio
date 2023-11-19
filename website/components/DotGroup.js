@@ -10,38 +10,31 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
   return (
     <div className="flex flex-col gap-6 fixed top-[60%] right-7 z-50">
       <Link
-        href="#home"
-        className={`${selectedPage === "home" ? selectedStyles : notSelectedStyles
+        href="#начало"
+        className={`${selectedPage === "начало" ? selectedStyles : notSelectedStyles
           } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("home")}
+        onClick={() => setSelectedPage("начало")}
       />
 
       <Link
-        href="#projects"
-        className={`${selectedPage === "projects" ? selectedStyles : notSelectedStyles
+        href="#инвеститор"
+        className={`${selectedPage === "инвеститор" ? selectedStyles : notSelectedStyles
           } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("projects")}
+        onClick={() => setSelectedPage("инвеститор")}
       />
 
       <Link
-        href="#articles"
-        className={`${selectedPage === "articles" ? selectedStyles : notSelectedStyles
+        href="#проекти"
+        className={`${selectedPage === "проекти" ? selectedStyles : notSelectedStyles
           } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("articles")}
+        onClick={() => setSelectedPage("проекти")}
       />
 
       <Link
-        href="#qualifications"
-        className={`${selectedPage === "qualifications" ? selectedStyles : notSelectedStyles
+        href="#контакти"
+        className={`${selectedPage === "контакти" ? selectedStyles : notSelectedStyles
           } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("qualifications")}
-      />
-
-      <Link
-        href="#contact"
-        className={`${selectedPage === "contact" ? selectedStyles : notSelectedStyles
-          } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("contact")}
+        onClick={() => setSelectedPage("контакти")}
       />
     </div>
   );

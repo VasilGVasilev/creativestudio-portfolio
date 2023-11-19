@@ -1,10 +1,11 @@
 import { useRef, useState } from "react";
 import useMediaQuery from "@/app/hooks/useMediaQuery";
 import { opensans, playfair, raleway } from "@/app/utils/fonts";
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { AiOutlineClose } from 'react-icons/ai';
 import { PiSquaresFour } from "react-icons/pi";
 import { motion } from "framer-motion"
+import Link from "next/link";
+
 
 // props: 
 // - name of link, must be constant
@@ -19,20 +20,20 @@ import { motion } from "framer-motion"
 const LinkTemplate = ({ page, selectedPage, setSelectedPage, setIsMenuToggled, isMenuToggled }) => {
   const lowerCasePage = page.toLowerCase();
   const exitModalToSelectedPage = (lowerCasePage) => {
+    setSelectedPage(lowerCasePage)
     if(setIsMenuToggled){
       setIsMenuToggled(!isMenuToggled)
     }
-    setSelectedPage(lowerCasePage)
   }
   return (
-    <AnchorLink
+    <Link
       className={`${selectedPage === lowerCasePage ? "text-[#facc15]" : ""
         }  hover:scale-125 transition duration-300`}
       href={`#${lowerCasePage}`}
       onClick={() => exitModalToSelectedPage(lowerCasePage)}
     >
       {page}
-    </AnchorLink>
+    </Link>
   );
 };
 
@@ -53,33 +54,28 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6 `}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <AnchorLink href={'#home'} ><h4 className={`${raleway.className} text-xl md:text-3xl font-bold`}>Creative Studio</h4></AnchorLink>
+        <Link href={'#начало'} ><h4 className={`${raleway.className} text-xl md:text-3xl font-bold`}>Creative Studio</h4></Link>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
           <div className={`${opensans.className} flex justify-between gap-16 text-base font-semibold`}>
             <LinkTemplate
-              page="Home"
+              page="Начало"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <LinkTemplate
-              page="Projects"
+              page="Инвеститор"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <LinkTemplate
-              page="Articles"
+              page="Проекти"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <LinkTemplate
-              page="Qualifications"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <LinkTemplate
-              page="Contact"
+              page="Контакти"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -125,35 +121,28 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               {/* MENU ITEMS */}
               <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white">
                 <LinkTemplate
-                  page="Home"
+                  page="Начало"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   setIsMenuToggled={setIsMenuToggled}
                   isMenuToggled={isMenuToggled}
                 />
                 <LinkTemplate
-                  page="Projects"
+                  page="Инвеститор"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   setIsMenuToggled={setIsMenuToggled}
                   isMenuToggled={isMenuToggled}
                 />
                 <LinkTemplate
-                  page="Articles"
+                  page="Проекти"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   setIsMenuToggled={setIsMenuToggled}
                   isMenuToggled={isMenuToggled}
                 />
                 <LinkTemplate
-                  page="Qualifications"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                  setIsMenuToggled={setIsMenuToggled}
-                  isMenuToggled={isMenuToggled}
-                />
-                <LinkTemplate
-                  page="Contact"
+                  page="Контакти"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   setIsMenuToggled={setIsMenuToggled}

@@ -56,7 +56,7 @@ export default function Home() {
 
         <div
           className="mt-50"
-          onViewportEnter={() => setSelectedPage("home")}
+          onViewportEnter={() => setSelectedPage("Начало")}
         >
           <Landing setSelectedPage={setSelectedPage} />
         </div>
@@ -71,7 +71,7 @@ export default function Home() {
         <div
           className="mt-50"
           amount="all"
-          onViewportEnter={() => setSelectedPage("articles")}
+          onViewportEnter={() => setSelectedPage("Инвеститор")}
         >
           <Articles />
         </div>
@@ -82,7 +82,7 @@ export default function Home() {
       <div className="w-5/6 mx-auto md:h-full ">
         <div
           className="mt-50"
-          onViewportEnter={() => setSelectedPage("projects")}
+          onViewportEnter={() => setSelectedPage("Проекти")}
         >
           <MyProjects />
         </div>
@@ -92,18 +92,7 @@ export default function Home() {
       <div className="w-5/6 mx-auto md:h-full">
         <div
           className="mt-50"
-          onViewportEnter={() => setSelectedPage("qualifications")}
-        >
-          <Qualifications />
-        </div>
-      </div>
-
-      <LineGradient />
-
-      <div className="w-5/6 mx-auto md:h-full">
-        <div
-          className="mt-50"
-          onViewportEnter={() => setSelectedPage("contact")}
+          onViewportEnter={() => setSelectedPage("Контакти")}
         >
           <Contact />
         </div>
