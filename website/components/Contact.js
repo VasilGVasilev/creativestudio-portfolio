@@ -2,12 +2,13 @@ import Link from "next/link";
 import LineGradient from "./LineGradient";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "./SocialMediaIcons";
+import { BiLogoInstagramAlt } from "react-icons/bi";
 
 const Contact = () => {
 
 
   return (
-    <section id="контакти" className="contact py-48">
+    <section id="контакти" className="contact py-40">
       {/* HEADINGS */}
       <motion.div
         initial="hidden"
@@ -22,9 +23,9 @@ const Contact = () => {
       >
         <div>
 
-          <p className="font-playfair font-semibold text-4xl">
-            <span className="text-yellow cursor-pointer">CONTACT ME</span> TO GET STARTED
-          </p>
+          <Link href={`tel:+359886879993`} className="font-playfair font-semibold text-4xl">
+            <span className="text-green-700 cursor-pointer animate-pulse hover:animate-none">ПОЗВЪНЕТЕ НИ СЕ</span> СЕГА
+          </Link>
 
           <div className="flex md:justify-end my-5">
             <LineGradient width="w-1/2" />
@@ -41,7 +42,8 @@ const Contact = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <SocialMediaIcons />
+            <Link href="#" ><BiLogoInstagramAlt size={40} className="mt-10 transition text-white hover:text-[#F20366]" /></Link>
+
           </motion.div>
         </div>
       </motion.div>

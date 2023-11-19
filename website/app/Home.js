@@ -37,7 +37,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-deep-blue">
+    <div className="bg-black">
       {/* navbar is not in layout because layout cannot pass on props and context is too complex for the current app magnitude */}
 
       <Navbar

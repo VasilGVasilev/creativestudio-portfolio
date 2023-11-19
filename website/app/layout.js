@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   const modalStatus = useModal((state) => state.modalStatus)
 
   return (
-    <html className={`h-full bg-[#010026] text-white scroll-smooth ${roboto.className} overflow-x-hidden`} lang='en'>
+    <html className={`h-full bg-black text-white scroll-smooth ${roboto.className} overflow-x-hidden`} lang='en'>
       <body className='overflow-x-hidden'>
         <Modal closeModal={closeModal} modalStatus={modalStatus}>
         </Modal>

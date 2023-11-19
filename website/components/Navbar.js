@@ -14,7 +14,6 @@ import Link from "next/link";
 
 // TODO: 
 // mobile menu comes as an animation with framer motion
-// may be reverse link to anchor link if not smooth
 // refactor img to Image
 
 const LinkTemplate = ({ page, selectedPage, setSelectedPage, setIsMenuToggled, isMenuToggled }) => {
