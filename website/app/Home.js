@@ -51,7 +51,7 @@ export default function Home() {
           setSelectedPage={setSelectedPage}
         />
       )}
-      
+
       <div className="mx-auto md:h-full">
 
         <div
@@ -66,16 +66,6 @@ export default function Home() {
 
       <LineGradient />
 
-      <div className="w-5/6 mx-auto md:h-full ">
-        <div
-          className="mt-50"
-          onViewportEnter={() => setSelectedPage("projects")}
-        >
-          <MyProjects />
-        </div>
-      </div>
-
-      <LineGradient />
 
       <div className="w-5/6 mx-auto">
         <div
@@ -87,6 +77,16 @@ export default function Home() {
         </div>
       </div>
 
+      <LineGradient />
+
+      <div className="w-5/6 mx-auto md:h-full ">
+        <div
+          className="mt-50"
+          onViewportEnter={() => setSelectedPage("projects")}
+        >
+          <MyProjects />
+        </div>
+      </div>
       <LineGradient />
 
       <div className="w-5/6 mx-auto md:h-full">

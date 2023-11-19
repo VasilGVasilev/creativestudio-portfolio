@@ -39,7 +39,7 @@ const LinkTemplate = ({ page, selectedPage, setSelectedPage, setIsMenuToggled, i
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-black";
+  const navbarBackground = isTopOfPage ? "" : "bg-black shadow-[0_1px_5px_0_#FFFFFF]";
   const modalRef = useRef(null);
 
   const closeModal = (e) => {
@@ -51,7 +51,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6 `}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <AnchorLink href={'#home'} ><h4 className={`${raleway.className} text-xl md:text-3xl font-bold`}>Creative Studio</h4></AnchorLink>
 
