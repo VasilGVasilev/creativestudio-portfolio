@@ -41,8 +41,8 @@ const Landing = () => {
             <span className="text-shadow-default" >Meчтания Дом</span>
             <span className="text-shadow-default" >Днес</span>
           </div>
-          <Link href="#" className="mt-10 inline-block bg-sky-dalia text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white ">Нашите проекти</Link>
-          <Link href="#" ><BiLogoInstagramAlt size={28} className="mt-10 transition text-white hover:text-[#F20366]" /></Link>
+          <Link href="#проекти" className="mt-10 inline-block bg-sky-dalia text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white ">Нашите проекти</Link>
+          <Link href="https://www.instagram.com/creativestudio_realestate/" ><BiLogoInstagramAlt size={28} className="mt-10 transition text-white hover:text-[#F20366]" /></Link>
         </motion.div>
 
       </motion.section>

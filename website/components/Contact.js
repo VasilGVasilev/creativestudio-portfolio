@@ -23,15 +23,14 @@ const Contact = () => {
       >
         <div>
 
-          <Link href={`tel:+359886879993`} className="font-playfair font-semibold text-4xl">
-            <span className="text-green-700 cursor-pointer animate-pulse hover:animate-none">ПОЗВЪНЕТЕ НИ СЕ</span> СЕГА
-          </Link>
+          <span className="font-playfair font-semibold text-4xl"><span className="text-green-600">ПОТЪРСЕТЕ НИ</span> СЕГА</span>
 
           <div className="flex md:justify-end my-5">
             <LineGradient width="w-1/2" />
           </div>
+
           <motion.div
-            className="flex mt-5 justify-end"
+            className="flex flex-col mt-5 justify-end gap-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -42,7 +41,9 @@ const Contact = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <Link href="#" ><BiLogoInstagramAlt size={40} className="mt-10 transition text-white hover:text-[#F20366]" /></Link>
+            <Link href={`mailto:office@creativestudiobg.com`} className="flex flex-row justify-end"><span className="hover:text-orange-400">office@creativestudiobg.com</span></Link>
+            <Link href={`tel:+359886879993`} className="flex flex-row justify-end "><span className="hover:text-green-600">+359886879993</span></Link>
+            <Link href="https://www.instagram.com/creativestudio_realestate/" className="flex flex-row justify-end"><BiLogoInstagramAlt size={40} className="text-white hover:text-[#F20366]" /></Link>
 
           </motion.div>
         </div>
