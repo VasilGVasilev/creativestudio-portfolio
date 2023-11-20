@@ -5,7 +5,7 @@ import Landing from "@/components/Landing";
 import DotGroup from "@/components/DotGroup";
 import MyProjects from "@/components/MyProjects";
 import LineGradient from "@/components/LineGradient";
-import Articles from "@/components/Articles";
+import Investor from "@/components/Investor";
 import Qualifications from "@/components/Qualifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -73,7 +73,7 @@ export default function Home() {
           amount="all"
           onViewportEnter={() => setSelectedPage("Инвеститор")}
         >
-          <Articles />
+          <Investor />
         </div>
       </div>
 
