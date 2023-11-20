@@ -10,17 +10,43 @@ import Image from "next/image";
 import { raleway } from "@/app/utils/fonts";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 
+import { useEffect, useState } from "react";
+  
+
+
+
 const Landing = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
-  const openModal = useModal((state) => state.openModal)
+  const openModal = useModal((state) => state.openModal);
+
+  //--------------------------------------------------------- CUSTOM CHANGING BG-IMG
+  const images = [
+    "/dalia/dalia-three.webp",
+    "/tilia/tilia-two.webp",
+    "/ixora/ixora-one.webp"
+  ]
+
+  const [currentImg, setCurrentImg] = useState(0); 
+
+  useEffect(()=>{
+    const interval = setInterval(() => {
+      setCurrentImg((prevImg) => (prevImg + 1) % images.length)
+    }, 5000);
+
+    return () => clearInterval(interval)
+  }, [])
+
+
+  //--------------------------------------------------------- CUSTOM CHANGING BG-IMG
+
   return (
 
       <motion.section
         id="начало"
         className="relative"
       >
+        <img src={`${images[currentImg]}`} className="h-screen w-full object-cover opacity-50 transition-shadow" alt="" />
 
-        <img src="/dalia/dalia-three.webp" className="h-screen w-full object-cover opacity-50" alt="" />
         <motion.div 
           // initial="hidden" 
           // whileInView="visible"
