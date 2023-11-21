@@ -57,9 +57,7 @@ const Investor = () => {
       >
         <div  >
           <img src="/investor-logo.webp" className="h-32" alt="investor-logo" />
-          <div className="flex justify-center mt-5">
-            <LineGradient width="w-2/3" />
-          </div>
+
         </div>
         <div className="flex flex-col gap-5 text-justify sm:text-left">
           <p className="font-semibold">
@@ -72,7 +70,7 @@ const Investor = () => {
       </motion.div>
 
       <motion.div
-        className="sm:grid sm:grid-cols-2"
+        className="sm:grid sm:grid-cols-2 mx-auto sm:mx-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}

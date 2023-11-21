@@ -59,7 +59,7 @@ const Landing = () => {
           initial={{ opacity: 0, y: -70 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 100, damping: 30, duration: 1.5 }}
-          className={`${raleway.className} absolute top-1/3 left-5 w-full h-full text-base ss:text-xl ss:ml-28`}
+          className={`${raleway.className} absolute top-1/4 left-5 w-full h-full text-base ss:text-xl ss:ml-28`}
         >
           <span className="font-semibold">Създаване на съвършенство</span>
           <div className="font-medium flex flex-col text-3xl ss:text-7xl">

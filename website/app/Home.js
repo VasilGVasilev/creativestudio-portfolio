@@ -63,10 +63,6 @@ export default function Home() {
       </div>
 
 
-
-      <LineGradient />
-
-
       <div className="w-5/6 mx-auto">
         <div
           className="mt-50"
@@ -77,17 +73,15 @@ export default function Home() {
         </div>
       </div>
 
-      <LineGradient />
 
-      <div className="w-5/6 mx-auto md:h-full ">
+      <div className="mx-auto bg-white">
         <div
-          className="mt-50"
+          className="mt-50 px-20"
           onViewportEnter={() => setSelectedPage("Проекти")}
         >
           <MyProjects />
         </div>
       </div>
-      <LineGradient />
 
       <div className="w-5/6 mx-auto md:h-full">
         <div

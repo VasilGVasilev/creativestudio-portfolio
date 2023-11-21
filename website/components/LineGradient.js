@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-const LineGradient = () => {
+const LineGradient = ({ width = "w-full" }) => {
   return (
-    <div className="h-0.5 w-full bg-white"/>
+    <div className={`h-0.5 ${width} bg-white`} />
   )
 };
 

@@ -58,9 +58,9 @@ const Project = ({ number, color, projectBorder, pictureLinkBorder, url, altLink
 };
 
 const MyProjects = () => {
-  const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+
   return (
-    <section id="проекти" className="pt-10 pb-24">
+    <section id="проекти" className="pt-10 pb-24 bg-white text-black">
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
 
@@ -76,13 +76,11 @@ const MyProjects = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className={`${playfair.className} font-semibold text-4xl mb-5`}>
-            <span className="text-red">PRO</span>JECTS
+          <p className={`${playfair.className} font-semibold text-4xl md:text-6xl mb-5`}>
+            НАШИТЕ ПРОЕКТИ
           </p>
-          <LineGradient width="w-1/3" />
-          <p className="mt-10 mb-7 text-neutral-300">
-            A few of my latest projects...
-          </p>
+          <LineGradient width="w-11/12" />
+
         </motion.div>
 
         {/* IMAGE */}
@@ -97,24 +95,7 @@ const MyProjects = () => {
             visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
           }}
         >
-          {isAboveLarge ? (
-            <div
-              className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-              before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
-            >
-              <Image
-                className="z-10 max-w-[700px] max-h-[400px]"
-                loader={imageLoader}
-                src="/assets/coding-image.webp"
-                width={3554}
-                height={1999}
-                alt="coding-image"
-              ></Image>
 
-            </div>
-          ) : (
-            <></>
-          )}
         </motion.div>
       </div>
 
