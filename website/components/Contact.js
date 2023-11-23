@@ -1,7 +1,6 @@
 import Link from "next/link";
 import LineGradient from "./LineGradient";
 import { motion } from "framer-motion";
-import SocialMediaIcons from "./SocialMediaIcons";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 
 const Contact = () => {

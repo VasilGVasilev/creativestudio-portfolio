@@ -1,4 +1,3 @@
-import LineGradient from "./LineGradient";
 import useMediaQuery from "@/app/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import { playfair } from "@/app/utils/fonts";
@@ -8,10 +7,10 @@ import { imageLoader } from "@/app/utils/imgLoader";
 
 
 
-const Project = ({ url, altLink, srcImg, imgW, imgH, projectName, projectDesc }) => {
+const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingYear }) => {
   return (
     <motion.div
-      className='p-10 grid grid-cols-1 sm:grid-cols-2 justify-center items-center gap-5'
+      className='grid grid-cols-1 lg:grid-cols-3 gap-12'
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -21,25 +20,34 @@ const Project = ({ url, altLink, srcImg, imgW, imgH, projectName, projectDesc })
         visible: { opacity: 1, y: 0 },
       }}
     >
-      <img src="/dalia/dalia-one.webp" alt="" />
-      <div className="flex flex-col gap-3">
+      <div className="lg:col-span-2">
+        <img src={srcImg} alt="project-picture" className="saturate-150" />
+      </div>
+
+      {/* Description */}
+      <div className="lg:col-span-1 flex flex-col gap-3 justify-center items-left text-sm bg-sky-50 p-3 relative z-0 before:-top-10 before:-left-2 before:absolute before:border-b-0 before:border-r-0
+              before:w-full before:h-full before:border-2 before:border-sky-dalia before:z-[-1]">
         {/* Title */}
-        <div>
-          Далия
+        <div className="font-semibold text-xl">
+          {projectName}
         </div>
 
         {/* Desc */}
-        <div>
-          "Охридско езеро парк" е голям и модерен жилищен комплекс, разположен в идеалния център на гр. София, до парк "Възраждане". Комплексът е разположен на 111.6 хил. кв.м РЗП и се състои от 12 отделни сгради с различна етажност - от 1 до 17 етажа. Най-високата сграда - в северната част на парцела, е на 17 етажа, а другите две са терасовидни с височина от 9 до 13 етажа. Комплексът ще предложи 881 апартамента - половината от които с една спалня, а другите с по две, три и четири. Част от апартаментите са със собствени градини и гаражи. Предвидени са 982 автоместа, ресторант-градина, детски площадки и помещения за магазини.
+        <div className="text-justify">
+          {projectDesc}
         </div>
 
         {/* Done in */}
         <div >
           <div className="">
             <p>Реализация</p>
-            <p>2025</p>
+            <p>{finishingYear} г.</p>
           </div>
-          <Link href="#проекти" className="mt-10 inline-block bg-sky-dalia text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Разгледайте тук</Link>
+          {url ?
+            <Link href={url} className="mt-10 inline-block bg-sky-dalia text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Разгледайте тук</Link>
+            :
+            <></>
+          }
         </div>
       </div>
     </motion.div>
@@ -49,13 +57,13 @@ const Project = ({ url, altLink, srcImg, imgW, imgH, projectName, projectDesc })
 const MyProjects = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="проекти" className="pt-10 pb-24 bg-white text-black">
+    <section id="проекти" className="py-14 px-5 sm:px-20 bg-white text-black">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="flex flex-col sm:flex-row sm:justify-evenly mt-10">
+      <div className="flex flex-col sm:flex-row sm:justify-evenly my-10 sm:my-20">
 
         {/* HEADER */}
         <motion.div
-          className=""
+          className="mb-5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -66,11 +74,9 @@ const MyProjects = () => {
           }}
         >
           <p className={`${playfair.className} font-semibold text-4xl md:text-6xl flex flex-col`}>
-            <span>НАШИТЕ</span>
-            <span>ПРОЕКТИ</span>
+            <span>Нашите</span>
+            <span>Проекти</span>
           </p>
-          <LineGradient />
-
         </motion.div>
 
         {/* IMAGE */}
@@ -87,10 +93,10 @@ const MyProjects = () => {
         >
           {isAboveLarge ? (
             <div
-              className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-              before:w-full before:h-full before:border-2 before:border-black before:z-[-1]"
+              className="relative z-0 ml-20 before:bg-sky-50 before:absolute before:-top-10 before:-left-10
+              before:w-full before:h-full before:border-2 before:border-sky-dalia before:z-[-1]"
             >
-              <img src="/crane.jpg" className="z-10 max-w-[600px] max-h-[600px]" alt="crane" />
+              <img src="/construction.jpg" className="z-10 max-w-[600px] max-h-[600px]" alt="crane" />
 
             </div>
           ) : (
@@ -100,51 +106,52 @@ const MyProjects = () => {
       </div>
 
       {/* PROJECTS */}
-      <div className="grid grid-cols-1 justify-center items-center mx-auto gap-5">
+      <div className="grid grid-cols-1 justify-center items-center mx-auto gap-10 sm:gap-20 sm:px-20">
 
-        {/* TILIA */}
+        {/* Tilia */}
         <Project
           url="https://tiliabg.com/"
-          altLink="tilia-img"
-          srcImg="/assets/project-tilia.webp"
+          srcImg="/tilia/tilia-one.webp"
           imgW="5000"
           imgH="2813"
-          projectName={'Tilia Residence'}
-          projectDesc={'A SSG website for a freelance project about sell of apartments developed via Next.js, Tailwind, React and Framer Motion. '}
+          projectName={'Тилия Резидънс'}
+          projectDesc={'В сърцето на квартал Връбница, в близост до Северен парк, се развива новият жилищен проект "Тилия Резидънс". Тук жителите могат да се насладят на спокойствието на квартала, без да се отказват от лесния достъп до търговски центрове, ресторанти и обществен транспорт. Идеално място за хора, които търсят съчетание от съвременен стил, удобства и близост до градските удоволствия.'}
+          finishingYear={'2025'}
         />
 
-        {/* IXORA */}
+        {/* Ixora */}
         <Project
           url="https://ixorabg.com/"
-          altLink="ixora-img"
-          srcImg="/assets/project-ixora.webp"
+          srcImg="/ixora/ixora-one.webp"
           imgW="5000"
           imgH="2813"
-          projectName={'Ixora Residence'}
-          projectDesc={'A SSG website for a freelance project about sell of apartments developed via Next.js, Tailwind, React and Framer Motion. '}
+          projectName={'Ixora Luxury Residence'}
+          projectDesc={'Ixora Luxury Residence е бутикова сграда със спа център и финтес, ситуирана в подножието на Витоша. Изпълнението и всички довършителни работи са заложени в изключително висок - бутиков клас. Вертикалната планировка по специален ландшафтен проект оформя зелен пояс около сградата, който създава усещане за живот в паркова среда.'}
+          finishingYear={'2024'}
         />
 
-        {/* CHAT */}
+
+
+        {/* Dalia */}
         <Project
-          url="http://vgvchat.tech/"
-          altLink="chat-img"
-          srcImg="/assets/project-chat.webp"
+          url=""
+          srcImg="/dalia/dalia-one.webp"
           imgW="1804"
           imgH="1087"
-          projectName={'VGV Chat'}
-          projectDesc={'A Create React App website for real-time messaging developed via SASS, React and Firebase with unit testing via Cypress.'}
+          projectName={'Далия'}
+          projectDesc={'Едно бижу в полите на Витоша с уникални гледки към София. Луксозен имот с над 700 кв.м. РЗП и двор от 750 кв.м. в престижния кв. Драгалевци. '}
+          finishingYear={'2022'}
         />
 
-        {/* AIRBNB */}
+        {/* West End */}
         <Project
-          url="https://vgv-rental.vercel.app/"
-          altLink="airbnb-img"
-          srcImg="/assets/project-airbnb.webp"
+          url=""
+          srcImg="/west-end/west-end-two.webp"
           imgW="2522"
           imgH="1237"
-          projectName={'Airbnb clone'}
-          projectDesc={'A fullstack application developed via Typescript, Next.js, React, Tailwind, Prisma, MongoDB, Zustand, Next-Auth, brypt, axios.'}
-
+          projectName={'West End Luxury Houses'}
+          projectDesc={'В процес на изграждане е луксозен комплекс от 18 самостоятелни еднофамилни къщи със собствени басейни в непосредствена близост до София - само на 20 минути от центъра. Напълно автономно вилно селище със собствен водоизточник и допълнително соларно захранване.'}
+          finishingYear={'2026'}
         />
 
       </div>

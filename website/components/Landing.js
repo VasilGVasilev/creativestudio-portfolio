@@ -1,9 +1,6 @@
-import SocialMediaIcons from "./SocialMediaIcons";
 import useMediaQuery from "@/app/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { playfair } from "@/app/utils/fonts";
-import TechStackIcons from "./TechStackIcons";
 import useModal from "@/app/hooks/useModal";
 import { imageLoader } from "@/app/utils/imgLoader";
 import Image from "next/image";

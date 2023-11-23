@@ -1,7 +1,4 @@
-import { playfair } from "@/app/utils/fonts";
-import LineGradient from "./LineGradient";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { imageLoader } from "@/app/utils/imgLoader";
 import Image from "next/image";
 

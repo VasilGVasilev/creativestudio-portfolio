@@ -2,11 +2,9 @@
 
 import Navbar from "@/components/Navbar";
 import Landing from "@/components/Landing";
-import DotGroup from "@/components/DotGroup";
 import MyProjects from "@/components/MyProjects";
 import LineGradient from "@/components/LineGradient";
 import Investor from "@/components/Investor";
-import Qualifications from "@/components/Qualifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import useMediaQuery from "./hooks/useMediaQuery";
@@ -18,7 +16,7 @@ import { useEffect, useState } from "react";
 
 
 export default function Home() {
-  const [selectedPage, setSelectedPage] = useState("home"); //where are we navigationwise
+  const [selectedPage, setSelectedPage] = useState("начало"); //where are we navigationwise
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 1060px)");
 
@@ -28,7 +26,7 @@ export default function Home() {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
-        setSelectedPage("home");
+        setSelectedPage("начало");
       }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
@@ -45,12 +43,6 @@ export default function Home() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      {isDesktop && (
-        <DotGroup
-          selectedPage={selectedPage}
-          setSelectedPage={setSelectedPage}
-        />
-      )}
 
       <div className="mx-auto md:h-full">
 
@@ -76,7 +68,7 @@ export default function Home() {
 
       <div className="mx-auto bg-white">
         <div
-          className="mt-50 px-20"
+          className="mt-50"
           onViewportEnter={() => setSelectedPage("Проекти")}
         >
           <MyProjects />

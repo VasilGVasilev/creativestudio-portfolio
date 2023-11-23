@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import useMediaQuery from "@/app/hooks/useMediaQuery";
-import { opensans, playfair, raleway } from "@/app/utils/fonts";
+import { opensans, raleway } from "@/app/utils/fonts";
 import { AiOutlineClose } from 'react-icons/ai';
 import { PiSquaresFour } from "react-icons/pi";
 import { motion } from "framer-motion"
