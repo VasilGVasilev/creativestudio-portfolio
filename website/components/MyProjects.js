@@ -80,29 +80,46 @@ const MyProjects = () => {
         </motion.div>
 
         {/* IMAGE */}
-        <motion.div
-          className=""
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          variants={{
-            hidden: { opacity: 0, scale: 0 },
-            visible: { opacity: 1, scale: 1 },
-          }}
-        >
-          {isAboveLarge ? (
-            <div
-              className="relative z-0 ml-20 before:bg-sky-50 before:absolute before:-top-10 before:-left-10
-              before:w-full before:h-full before:border-2 before:border-sky-dalia before:z-[-1]"
-            >
-              <img src="/construction.jpg" className="z-10 max-w-[600px] max-h-[600px]" alt="crane" />
 
+        {isAboveLarge ? (
+          <div
+            className=""
+          >
+            <div className="z-10 max-w-[600px] max-h-[600px]">
+              <motion.img
+                src='/construction/row-1-column-1.jpg'
+                alt="construction-img"
+                initial={{ x: 150, opacity: 0 }}
+                animate={{ x: 0, opacity: 100 }}
+                transition={{ duration: 1.5, delay: 0.2 }}
+                viewport={{ once: true }}
+
+              />
+              <motion.img
+                src='/construction/row-2-column-1.jpg'
+                alt="construction-img"
+                initial={{ x: -150, opacity: 0 }}
+                animate={{ x: 0, opacity: 100 }}
+                transition={{ duration: 1.5, delay: 0.4 }}
+                viewport={{ once: true }}
+
+              />
+              <motion.img
+                src='/construction/row-3-column-1.jpg'
+                alt="construction-img"
+                initial={{ x: 150, opacity: 0 }}
+                animate={{ x: 0, opacity: 100 }}
+                transition={{ duration: 1.5, delay: 0.6 }}
+                viewport={{ once: true }}
+
+              />
             </div>
-          ) : (
-            <></>
-          )}
-        </motion.div>
+
+          </div>
+        ) : (
+          <></>
+        )}
+
       </div>
 
       {/* PROJECTS */}
