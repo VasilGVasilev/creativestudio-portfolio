@@ -2,21 +2,6 @@ import { motion } from "framer-motion";
 import { imageLoader } from "@/app/utils/imgLoader";
 import Image from "next/image";
 
-// the following two are merely templates for the two states /variants/
-// staggering one by one pics of projects effect
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const imageVariant = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1 },
-};
 
 const InvestorProjectImage = ({ url }) => {
 
@@ -38,7 +23,7 @@ const InvestorProjectImage = ({ url }) => {
 
 const Investor = () => {
   return (
-    <section id="инвеститор" className="grid sm:grid-cols-2 items-center justify-center gap-10 p-10">
+    <section id="инвеститор" className="py-24 grid sm:grid-cols-2 items-center justify-center gap-10 p-10">
 
       {/* HEADINGS */}
       <motion.div

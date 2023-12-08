@@ -7,7 +7,7 @@ const Contact = () => {
 
 
   return (
-    <section id="контакти" className="contact py-40">
+    <section id="контакти" className="contact py-44">
       {/* HEADINGS */}
       <motion.div
         initial="hidden"

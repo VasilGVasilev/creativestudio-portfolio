@@ -6,5 +6,3 @@ const LineGradient = ({ width = "w-full" }) => {
 };
 
 export default LineGradient;
-
-// default prop {width = 'w-full'} will be override if another is passed on

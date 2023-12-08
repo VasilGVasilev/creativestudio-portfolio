@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer className="h-48 bg-white pt-10 ">

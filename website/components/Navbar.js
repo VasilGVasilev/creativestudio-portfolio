@@ -7,11 +7,6 @@ import { motion } from "framer-motion"
 import Link from "next/link";
 
 
-// props: 
-// - name of link, must be constant
-// - selected or to be selected animation
-// - change state in parent of Navbar component -> Home component
-
 // TODO: 
 // mobile menu comes as an animation with framer motion
 // refactor img to Image

@@ -3,7 +3,6 @@
 import Navbar from "@/components/Navbar";
 import Landing from "@/components/Landing";
 import MyProjects from "@/components/MyProjects";
-import LineGradient from "@/components/LineGradient";
 import Investor from "@/components/Investor";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -26,7 +25,6 @@ export default function Home() {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
-        setSelectedPage("начало");
       }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
@@ -48,9 +46,8 @@ export default function Home() {
 
         <div
           className="mt-50"
-          onViewportEnter={() => setSelectedPage("Начало")}
         >
-          <Landing setSelectedPage={setSelectedPage} />
+          <Landing />
         </div>
       </div>
 
@@ -59,7 +56,6 @@ export default function Home() {
         <div
           className="mt-50"
           amount="all"
-          onViewportEnter={() => setSelectedPage("Инвеститор")}
         >
           <Investor />
         </div>
@@ -69,7 +65,6 @@ export default function Home() {
       <div className="mx-auto bg-white">
         <div
           className="mt-50"
-          onViewportEnter={() => setSelectedPage("Проекти")}
         >
           <MyProjects />
         </div>
@@ -78,7 +73,6 @@ export default function Home() {
       <div className="w-5/6 mx-auto md:h-full">
         <div
           className="mt-50"
-          onViewportEnter={() => setSelectedPage("Контакти")}
         >
           <Contact />
         </div>
