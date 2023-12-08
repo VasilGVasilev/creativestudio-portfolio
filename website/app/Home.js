@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 
 
 // TODO:
-// lighthouse optimal
+// change imgLoader to new domain
 
 
 export default function Home() {
@@ -55,7 +55,6 @@ export default function Home() {
       <div className="w-5/6 mx-auto">
         <div
           className="mt-50"
-          amount="all"
         >
           <Investor />
         </div>

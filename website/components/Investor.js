@@ -9,14 +9,13 @@ const InvestorProjectImage = ({ url }) => {
   return (
     <div  className="bg-inherit flex flex-col justify-center items-center w-[300px] h-[300px]">
 
-        {/* <Image
+        <Image
           loader={imageLoader}
           src={`${url}`}
           alt='pic'
           width={1298}
           height={828}
-        ></Image> */}
-        <img src={`${url}`} alt="project-pic" />
+        ></Image>
     </div>
   );
 };
@@ -38,7 +37,16 @@ const Investor = () => {
         }}
       >
         <div  >
-          <img src="/investor-logo.webp" className="h-32" alt="investor-logo" />
+          
+        <Image
+          loader={imageLoader}
+          src="/investor-logo.webp"
+          className="h-32 w-full"
+          alt='investor-logo'
+          width={1298}
+          height={828}
+        ></Image>
+          {/* <img src="/investor-logo.webp" className="h-32" alt="investor-logo" /> */}
 
         </div>
         <div className="flex flex-col gap-5 text-justify sm:text-left">
