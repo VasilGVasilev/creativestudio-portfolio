@@ -62,22 +62,14 @@ const MyProjects = () => {
       <div className="flex flex-col sm:flex-row sm:justify-evenly my-10 sm:my-20">
 
         {/* HEADER */}
-        <motion.div
+        <div
           className="mb-5"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
         >
           <p className={`${playfair.className} font-semibold text-4xl md:text-6xl flex flex-col`}>
             <span>Нашите</span>
             <span>Проекти</span>
           </p>
-        </motion.div>
+        </div>
 
         {/* IMAGE */}
 
