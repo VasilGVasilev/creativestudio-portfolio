@@ -46,7 +46,7 @@ const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingY
           {url ?
             <Link href={url} className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Разгледайте тук</Link>
             :
-            <div href={url} className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Очаквайте скоро</div>
+            <div className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Очаквайте скоро</div>
           }
         </div>
       </div>

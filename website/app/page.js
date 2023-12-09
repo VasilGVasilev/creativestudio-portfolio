@@ -1,12 +1,8 @@
-import Home from "./Home";
+import Home from "./Home"
+import { metaData } from "./utils/metadata"
 
-export const metadata = {
-  title: 'Creative Studio',
-  description: 'Creative Studio е строително-инвестиционно холдингово дружество, което финансира, проектира и изгражда луксозни многофамилни и еднофамилни жилищни сгради и ги реализира на пазара.'
-}
+export const metdata = metaData('Начало')
 
 export default function Page() {
-  return (
-    <Home></Home>
-  )
+  return (<Home></Home>)
 }
