@@ -22,7 +22,7 @@ const LinkTemplate = ({ page, selectedPage, setSelectedPage, setIsMenuToggled, i
   return (
     <Link
       className={`${selectedPage === lowerCasePage ? "text-[#facc15]" : ""
-        }  hover:scale-125 transition duration-300`}
+        } md:text-xl hover:scale-125 transition duration-300`}
       href={`#${lowerCasePage}`}
       onClick={() => exitModalToSelectedPage(lowerCasePage)}
     >
@@ -34,7 +34,11 @@ const LinkTemplate = ({ page, selectedPage, setSelectedPage, setIsMenuToggled, i
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-black shadow-[0_1px_5px_0_#FFFFFF]";
+  const navbarBackground = isTopOfPage ? "" : "bg-black shadow-[0_1px_1px_0_#FFFFFF]";
+  const logoBackground = isTopOfPage ? "bg-black" : "bg-white";
+  const logoColor = isTopOfPage ? "text-white" : "text-black";
+
+
   const modalRef = useRef(null);
 
   const closeModal = (e) => {
@@ -48,7 +52,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6 transition`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <Link href={'#начало'} ><h4 className={`${raleway.className} text-xl md:text-3xl font-bold`}>Creative Studio</h4></Link>
+        <Link href={'#начало'} ><h4 className={`${raleway.className} ${logoBackground} ${logoColor} text-center inline-block rounded-full px-3 py-4 text-2xl md:text-4xl font-bold`}>Creative Studio</h4></Link>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (

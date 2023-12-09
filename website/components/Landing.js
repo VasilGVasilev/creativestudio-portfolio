@@ -6,6 +6,8 @@ import { imageLoader } from "@/app/utils/imgLoader";
 import Image from "next/image";
 import { raleway } from "@/app/utils/fonts";
 import { BiLogoInstagramAlt } from "react-icons/bi";
+import { FaFacebookSquare } from "react-icons/fa";
+
 
 import { useEffect, useState } from "react";
 
@@ -63,16 +65,20 @@ const Landing = () => {
         initial={{ opacity: 0, y: -70 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 30, duration: 1.5 }}
-        className={`${raleway.className} absolute top-1/4 ml-10 text-base ss:text-xl`}
+        className={`${raleway.className} absolute top-1/3 ml-10 text-base ss:text-xl`}
       >
         <span className="font-semibold">Създаване на съвършенство</span>
-        <div className="font-medium flex flex-col text-3xl ss:text-7xl">
+        <div className="font-medium flex flex-col text-xl ss:text-4xl">
           <span className="text-shadow-default" >Открийте</span>
           <span className="text-shadow-default" >Meчтания Дом</span>
           <span className="text-shadow-default" >Днес</span>
         </div>
-        <Link href="#проекти" className="mt-10 inline-block bg-sky-dalia text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Нашите проекти</Link>
-        <Link href="https://www.instagram.com/creativestudio_realestate/" ><BiLogoInstagramAlt size={28} className="mt-10 transition text-white hover:text-[#F20366]" /></Link>
+        <Link href="#проекти" className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-base md:text-lg transition hover:bg-black hover:text-white">Нашите проекти</Link>
+        <div className="flex flex-row justify-start items-center gap-5">
+          <Link href="https://www.instagram.com/creativestudio_realestate/" ><BiLogoInstagramAlt size={50} className="mt-10 transition text-white hover:text-[#F20366]" /></Link>
+          <Link href="https://www.facebook.com/profile.php?id=61553703571861" ><FaFacebookSquare size={44} className="mt-10 transition text-white hover:text-blue-700" /></Link>
+        </div>
+
       </motion.div>
 
     </section>

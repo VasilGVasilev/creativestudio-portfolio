@@ -25,8 +25,8 @@ const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingY
       </div>
 
       {/* Description */}
-      <div className="lg:col-span-1 flex flex-col gap-3 justify-center items-left text-sm bg-sky-50 p-3 relative z-0 before:-top-10 before:-left-2 before:absolute before:border-b-0 before:border-r-0
-              before:w-full before:h-full before:border-2 before:border-sky-dalia before:z-[-1]">
+      <div className="lg:col-span-1 flex flex-col gap-3 justify-center items-left text-sm bg-[#DDC49B] p-3 relative z-0 before:-top-10 before:-left-2 before:absolute before:border-b-0 before:border-r-0
+              before:w-full before:h-full before:border-2 before:border-black before:z-[-1]">
         {/* Title */}
         <div className="font-semibold text-xl">
           {projectName}
@@ -40,13 +40,13 @@ const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingY
         {/* Done in */}
         <div >
           <div className="">
-            <p>Реализация</p>
+            <p className="font-semibold">Реализация</p>
             <p>{finishingYear} г.</p>
           </div>
           {url ?
-            <Link href={url} className="mt-10 inline-block bg-sky-dalia text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Разгледайте тук</Link>
+            <Link href={url} className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Разгледайте тук</Link>
             :
-            <></>
+            <div href={url} className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Очаквайте скоро</div>
           }
         </div>
       </div>
@@ -125,7 +125,7 @@ const MyProjects = () => {
           imgH="2813"
           projectName={'Тилия Резидънс'}
           projectDesc={'В сърцето на квартал Връбница, в близост до Северен парк, се развива новият жилищен проект "Тилия Резидънс". Тук жителите могат да се насладят на спокойствието на квартала, без да се отказват от лесния достъп до търговски центрове, ресторанти и обществен транспорт. Идеално място за хора, които търсят съчетание от съвременен стил, удобства и близост до градските удоволствия.'}
-          finishingYear={'2025'}
+          finishingYear={'2023 - 2025'}
         />
 
         {/* Ixora */}
@@ -136,7 +136,7 @@ const MyProjects = () => {
           imgH="2813"
           projectName={'Ixora Luxury Residence'}
           projectDesc={'Ixora Luxury Residence е бутикова сграда със спа център и финтес, ситуирана в подножието на Витоша. Изпълнението и всички довършителни работи са заложени в изключително висок - бутиков клас. Вертикалната планировка по специален ландшафтен проект оформя зелен пояс около сградата, който създава усещане за живот в паркова среда.'}
-          finishingYear={'2024'}
+          finishingYear={'2022 - 2024'}
         />
 
 
@@ -149,7 +149,7 @@ const MyProjects = () => {
           imgH="1087"
           projectName={'Далия'}
           projectDesc={'Едно бижу в полите на Витоша с уникални гледки към София. Луксозен имот с над 700 кв.м. РЗП и двор от 750 кв.м. в престижния кв. Драгалевци. '}
-          finishingYear={'2022'}
+          finishingYear={'2020 - 2022'}
         />
 
         {/* West End */}
@@ -160,7 +160,7 @@ const MyProjects = () => {
           imgH="1237"
           projectName={'West End Luxury Houses'}
           projectDesc={'В процес на изграждане е луксозен комплекс от 18 самостоятелни еднофамилни къщи със собствени басейни в непосредствена близост до София - само на 20 минути от центъра. Напълно автономно вилно селище със собствен водоизточник и допълнително соларно захранване.'}
-          finishingYear={'2026'}
+          finishingYear={'2024 - 2026'}
         />
 
       </div>
