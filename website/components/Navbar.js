@@ -5,7 +5,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { PiSquaresFour } from "react-icons/pi";
 import { motion } from "framer-motion"
 import Link from "next/link";
-
+import { usePathname } from 'next/navigation'
 
 // TODO: 
 // mobile menu comes as an animation with framer motion
@@ -32,11 +32,16 @@ const LinkTemplate = ({ page, selectedPage, setSelectedPage, setIsMenuToggled, i
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
+  const pathname = usePathname();
+
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-black shadow-[0_1px_1px_0_#FFFFFF]";
-  const logoBackground = isTopOfPage ? "bg-black" : "bg-white";
-  const logoColor = isTopOfPage ? "text-white" : "text-black";
+
+  // homePage or daliaPage 
+  const navbarBackground = isTopOfPage && pathname === '/' ? "" : "bg-black shadow-[0_1px_1px_0_#FFFFFF]";
+  const logoBackground = isTopOfPage && pathname === '/' ? "bg-black" : "bg-white";
+  const logoColor = isTopOfPage && pathname === '/' ? "text-white" : "text-black";
+  const navbarTop0 = pathname === '/' ? "top-0" : "";
 
 
   const modalRef = useRef(null);
@@ -50,13 +55,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6 transition`}>
+    <nav className={`${navbarBackground} ${navbarTop0} fixed z-40 w-full py-6 transition`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <Link href={'#начало'} ><h4 className={`${raleway.className} ${logoBackground} ${logoColor} text-center inline-block rounded-full px-3 py-4 text-2xl md:text-4xl font-bold`}>Creative Studio</h4></Link>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
-          <div className={`${opensans.className} flex justify-between gap-16 text-base font-semibold`}>
+          <div className={`${opensans.className} flex justify-between gap-10 text-base font-semibold`}>
             <LinkTemplate
               page="Начало"
               selectedPage={selectedPage}

@@ -2,6 +2,7 @@
 import './globals.css'
 import { roboto } from './utils/fonts'
 import useModal from "./hooks/useModal";
+import { NavbarProvider } from './contexts/navbarContext';
 
 
 export default function RootLayout({ children }) {
@@ -11,7 +12,9 @@ export default function RootLayout({ children }) {
   return (
     <html className={` bg-black text-white ${roboto.className} overflow-x-hidden`} lang='en'>
       <body className='bg-black overflow-x-hidden'>
-        {children}
+        <NavbarProvider>
+          {children}
+        </NavbarProvider>
       </body>
     </html>
   )

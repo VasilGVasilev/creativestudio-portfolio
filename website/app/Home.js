@@ -7,7 +7,8 @@ import Investor from "@/components/Investor";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import useMediaQuery from "./hooks/useMediaQuery";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useNavbarContext } from "./contexts/navbarContext";
 
 
 // TODO:
@@ -15,11 +16,10 @@ import { useEffect, useState } from "react";
 
 
 export default function Home() {
-  const [selectedPage, setSelectedPage] = useState("начало"); //where are we navigationwise
-  const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const isDesktop = useMediaQuery("(min-width: 1060px)");
 
+  const { selectedPage, setSelectedPage, isTopOfPage, setIsTopOfPage } = useNavbarContext();
 
+  // const isDesktop = useMediaQuery("(min-width: 1060px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,10 +37,10 @@ export default function Home() {
       {/* navbar is not in layout because layout cannot pass on props and context is too complex for the current app magnitude */}
 
       <Navbar
-        isTopOfPage={isTopOfPage}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
+          isTopOfPage={isTopOfPage}
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
 
       <div className="mx-auto md:h-full">
 

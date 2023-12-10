@@ -20,12 +20,13 @@ const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingY
         visible: { opacity: 1, y: 0 },
       }}
     >
+      {/* Image */}
       <div className="lg:col-span-2">
         <img src={srcImg} alt="project-picture" className="saturate-150" />
       </div>
 
       {/* Description */}
-      <div className="lg:col-span-1 flex flex-col gap-3 justify-center items-left text-sm bg-[#DDC49B] p-3 relative z-0 before:-top-10 before:-left-2 before:absolute before:border-b-0 before:border-r-0
+      <div className="lg:col-span-1 flex flex-col gap-3 justify-center items-left text-sm bg-[#ece0cd] p-3 relative z-0 before:-top-10 before:-left-2 before:absolute before:border-b-0 before:border-r-0
               before:w-full before:h-full before:border-2 before:border-black before:z-[-1]">
         {/* Title */}
         <div className="font-semibold text-xl">
@@ -44,9 +45,9 @@ const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingY
             <p>{finishingYear} г.</p>
           </div>
           {url ?
-            <Link href={url} className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Разгледайте тук</Link>
+            <Link href={url} className="mt-5 inline-block bg-black text-white px-3 py-4 font-semibold text-sm md:text-base transition hover:bg-white hover:text-black">Разгледайте тук</Link>
             :
-            <div className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-xl md:text-lg transition hover:bg-black hover:text-white">Очаквайте скоро</div>
+            <div className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-sm md:text-base">Очаквайте скоро</div>
           }
         </div>
       </div>
@@ -143,7 +144,7 @@ const MyProjects = () => {
 
         {/* Dalia */}
         <Project
-          url=""
+          url="/dalia/"
           srcImg="/dalia/dalia-one.webp"
           imgW="1804"
           imgH="1087"
