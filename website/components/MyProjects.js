@@ -80,30 +80,30 @@ const MyProjects = () => {
           >
             <div className="z-10 max-w-[600px] max-h-[600px]">
               <motion.img
-                src='/construction/row-1-column-1.jpg'
+                src='/construction/row-1-column-1.webp'
                 alt="construction-img"
+                viewport={{ once: true, amount: 0.8 }}
                 initial={{ x: 150, opacity: 0 }}
                 animate={{ x: 0, opacity: 100 }}
-                transition={{ duration: 1.5, delay: 0.2 }}
-                viewport={{ once: true }}
+                transition={{ duration: 1.5, delay: 0.5 }}
 
               />
               <motion.img
-                src='/construction/row-2-column-1.jpg'
+                src='/construction/row-2-column-1.webp'
                 alt="construction-img"
+                viewport={{ once: true, amount: 0.8 }}
                 initial={{ x: -150, opacity: 0 }}
                 animate={{ x: 0, opacity: 100 }}
-                transition={{ duration: 1.5, delay: 0.4 }}
-                viewport={{ once: true }}
+                transition={{ duration: 1.5, delay: 1 }}
 
               />
               <motion.img
-                src='/construction/row-3-column-1.jpg'
+                src='/construction/row-3-column-1.webp'
                 alt="construction-img"
+                viewport={{ once: true, amount: 0.8 }}
                 initial={{ x: 150, opacity: 0 }}
                 animate={{ x: 0, opacity: 100 }}
-                transition={{ duration: 1.5, delay: 0.6 }}
-                viewport={{ once: true }}
+                transition={{ duration: 1.5, delay: 1.5 }}
 
               />
             </div>
