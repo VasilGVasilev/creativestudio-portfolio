@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~react-image-gallery/styles/css/image-gallery.css";
 .text-shadow-default {
     text-shadow: 2px 4px 8px #ffffff95;
 }

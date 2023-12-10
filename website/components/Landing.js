@@ -20,9 +20,10 @@ const Landing = () => {
 
   //--------------------------------------------------------- CUSTOM CHANGING BG-IMG
   const images = [
-    "/dalia/dalia-three.webp",
     "/tilia/tilia-two.webp",
-    "/ixora/ixora-one.webp"
+    "/dalia/dalia-three.webp",
+    "/ixora/ixora-one.webp",
+    "/west-end/west-end-two.webp"
   ]
 
   const [currentImg, setCurrentImg] = useState(0);
