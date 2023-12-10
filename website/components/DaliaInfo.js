@@ -37,7 +37,7 @@ const DaliaInfo = () => {
                 className="relative bg-cover bg-center h-screen flex items-center"
             >
                 <img
-                    className="absolute inset-0 bg-cover bg-center opacity-10"
+                    className="absolute inset-0 h-screen w-full object-cover opacity-10"
                     src="/dalia/dalia-three.webp"
                     alt='pic'
                 />
@@ -46,7 +46,7 @@ const DaliaInfo = () => {
                     <div
 
 
-                        className={`${raleway.className} flex flex-col sm:flex-row justify-center items-center gap-10 text-base ss:text-xl`}
+                        className={`${roboto.className} flex flex-col sm:flex-row justify-center items-center gap-10 text-base ss:text-xl`}
                     >
                         {/* TITLE */}
                         <motion.p
@@ -54,7 +54,7 @@ const DaliaInfo = () => {
                             initial={{ opacity: 0, x: -70 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1.5 }}
-                            className={`${playfair.className} text-white flex flex-col`}>
+                            className={`${roboto.className} text-white flex flex-col`}>
                             <span
                                 className="font-semibold text-xl md:text-2xl"
                             >Луксозна еднофамилна</span>
@@ -62,7 +62,7 @@ const DaliaInfo = () => {
                                 className="font-semibold text-xl md:text-2xl"
                             >къща Далия</span>
                             <span
-                                className="mt-2 font-light italic text-base md:text-lg"
+                                className="mt-2 font-light italic text-base md:text-lg text-yellow-500"
                             >Етап - Акт 16</span>
 
                             <span
@@ -94,8 +94,12 @@ const DaliaInfo = () => {
                     <span><span className="font-extrabold text-yellow-500">Полуподземен етаж </span> - гаражи за 4 автомобила, фитнес, котел и избено помещение - 187 кв.м. </span>
 
                 </p>
+
+
+            </div>
+            <div className="relative bg-white text-black w-full h-full p-10 sm:px-40 lg:px-64">
                 <p className="my-10 text-3xl sm:text-5xl">Характеристики </p>
-                <p className={`${roboto.className} text-white font-semibold text-sm md:text-base grid grid-cols-1 md:grid-cols-2 gap-10 text-justify `}>
+                <p className={`${roboto.className} text-black font-semibold text-sm md:text-base grid grid-cols-1 md:grid-cols-2 gap-10 text-justify `}>
                     <span><span className="font-extrabold text-yellow-500">Покрив</span> - Ексклузивен завършек на покрива с луксозни керемиди Брамак Тегалит с протектор система с 5 защити - цвят антрацит плюс ламарина черен мат</span>
                     <span><span className="font-extrabold text-yellow-500">Покрив</span> - Луксозна фасада от Гранит, Травертин и Варовик по специален архитектурен и технически проект</span>
                     <span><span className="font-extrabold text-yellow-500">Фасада</span> - Гаражни секционни врати Hormann, висок клас Термо Сейф 65 входна блиндирана врата Hormann </span>
@@ -115,7 +119,6 @@ const DaliaInfo = () => {
                     <span><span className="font-extrabold text-yellow-500">Газ</span> - Изградена газова връзка</span>
                     <span><span className="font-extrabold text-yellow-500">Осветление</span> - Осветление по фасада</span>
                 </p>
-
             </div>
             <div className="w-full h-full p-10">
                 <ImageGallery items={images} />

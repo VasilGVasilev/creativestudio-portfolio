@@ -22,7 +22,7 @@ const InvestorProjectImage = ({ url }) => {
 
 const Investor = () => {
   return (
-    <section id="инвеститор" className="py-24 grid sm:grid-cols-2 items-center justify-center gap-10 p-10">
+    <section id="инвеститор" className="py-32 grid sm:grid-cols-2 items-center justify-center gap-10 p-10">
 
       {/* HEADINGS */}
       <div
