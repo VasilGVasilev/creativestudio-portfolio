@@ -2,6 +2,7 @@ import Link from "next/link";
 import LineGradient from "./LineGradient";
 import { motion } from "framer-motion";
 import { BiLogoInstagramAlt } from "react-icons/bi";
+import { FaFacebookSquare } from "react-icons/fa";
 
 const Contact = () => {
 
@@ -42,8 +43,10 @@ const Contact = () => {
           >
             <Link href={`mailto:office@creativestudiobg.com`} className="flex flex-row justify-end"><span className="hover:text-orange-400">office@creativestudiobg.com</span></Link>
             <Link href={`tel:+359886879993`} className="flex flex-row justify-end "><span className="hover:text-green-600">+359886879993</span></Link>
-            <Link href="https://www.instagram.com/creativestudio_realestate/" className="flex flex-row justify-end"><BiLogoInstagramAlt size={40} className="text-white hover:text-[#F20366]" /></Link>
-
+            <div className="flex flex-row justify-end items-center gap-3">
+              <Link href="https://www.instagram.com/creativestudio_realestate/" ><BiLogoInstagramAlt size={50} className="transition text-white hover:text-[#F20366]" /></Link>
+              <Link href="https://www.facebook.com/profile.php?id=61553703571861" ><FaFacebookSquare size={44} className="transition text-white hover:text-blue-700" /></Link>
+            </div>
           </motion.div>
         </div>
       </motion.div>
