@@ -57,7 +57,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navbarBackground} ${navbarTop0} fixed z-40 w-full py-6 transition`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <Link href={'#начало'} ><h4 className={`${raleway.className} ${logoBackground} ${logoColor} text-center inline-block rounded-full px-3 py-4 text-2xl md:text-4xl font-bold`}>Creative Studio</h4></Link>
+        <Link href={'#начало'} ><h4 className={`${raleway.className} ${logoBackground} ${logoColor} text-center inline-block rounded-full px-3 py-4 text-2xl md:text-4xl font-bold hover:scale-110 transition `}>Creative Studio</h4></Link>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (

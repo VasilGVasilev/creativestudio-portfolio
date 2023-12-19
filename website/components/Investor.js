@@ -38,7 +38,7 @@ const Investor = () => {
             width={1298}
             height={828}
           ></Image> */}
-          <img src="/investor-logo.webp" className="h-32" alt="investor-logo" />
+          <img src="/investor-logo.webp" className="h-32 rounded-lg" alt="investor-logo" />
 
         </div>
         <div className="flex flex-col gap-5 text-justify sm:text-left">

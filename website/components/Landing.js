@@ -68,11 +68,11 @@ const Landing = () => {
         transition={{ type: "spring", stiffness: 100, damping: 30, duration: 1.5 }}
         className={`${raleway.className} absolute top-1/3 ml-10 text-base ss:text-xl`}
       >
-        <span className="font-semibold">Създаване на съвършенство</span>
-        <div className="font-medium flex flex-col text-xl ss:text-4xl">
-          <span className="text-shadow-default" >Открийте</span>
-          <span className="text-shadow-default" >Meчтания Дом</span>
-          <span className="text-shadow-default" >Днес</span>
+        <span className="text-shadow-default font-semibold">Създаване на съвършенство</span>
+        <div className="mt-3 text-shadow-default font-medium flex flex-col gap-3 text-xl ss:text-4xl">
+          <span className="" >Открийте</span>
+          <span className="" >Meчтания Дом</span>
+          <span className="" >Днес</span>
         </div>
         <Link href="#проекти" className="mt-10 inline-block bg-black text-white px-3 py-4 font-semibold text-base md:text-lg transition hover:bg-black hover:text-white">Нашите проекти</Link>
         <div className="flex flex-row justify-start items-center gap-5">
