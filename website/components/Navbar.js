@@ -15,14 +15,14 @@ const LinkTemplate = ({ page, selectedPage, setSelectedPage, setIsMenuToggled, i
   const lowerCasePage = page.toLowerCase();
   const exitModalToSelectedPage = (lowerCasePage) => {
     setSelectedPage(lowerCasePage)
-    if(setIsMenuToggled){
+    if (setIsMenuToggled) {
       setIsMenuToggled(!isMenuToggled)
     }
   }
   return (
     <Link
       className={`${selectedPage === lowerCasePage ? "text-[#facc15]" : ""
-        } md:text-xl hover:scale-125 transition duration-300`}
+        } md:text-xl transition duration-300 hover:scale-110`}
       href={`#${lowerCasePage}`}
       onClick={() => exitModalToSelectedPage(lowerCasePage)}
     >
@@ -57,7 +57,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navbarBackground} ${navbarTop0} fixed z-40 w-full py-6 transition`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <Link href={'#начало'} ><h4 className={`${raleway.className} ${logoBackground} ${logoColor} text-center inline-block rounded-full px-3 py-4 text-2xl md:text-4xl font-bold hover:scale-110 transition `}>Creative Studio</h4></Link>
+        <Link href={'#начало'} ><h4 className={`${raleway.className} ${logoBackground} ${logoColor} text-center inline-block rounded-full px-3 py-4 text-2xl md:text-4xl font-bold hover:scale-110 transition duration-300 `}>Creative Studio</h4></Link>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
@@ -89,7 +89,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             onClick={() => setIsMenuToggled(!isMenuToggled)}
             aria-label="Open mobile menu"
           >
-           <PiSquaresFour size={24} />
+            <PiSquaresFour size={24} />
           </button>
         )}
 
