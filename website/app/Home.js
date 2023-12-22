@@ -19,7 +19,6 @@ export default function Home() {
 
   const { selectedPage, setSelectedPage, isTopOfPage, setIsTopOfPage } = useNavbarContext();
 
-  // const isDesktop = useMediaQuery("(min-width: 1060px)");
 
   useEffect(() => {
     const handleScroll = () => {
