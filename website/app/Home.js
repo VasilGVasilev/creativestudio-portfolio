@@ -11,8 +11,6 @@ import { useEffect } from "react";
 import { useNavbarContext } from "./contexts/navbarContext";
 
 
-// TODO:
-// change imgLoader to new domain
 
 
 export default function Home() {
