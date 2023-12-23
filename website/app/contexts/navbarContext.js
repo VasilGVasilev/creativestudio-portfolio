@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 export const NavbarContext  = createContext();
 
+//custom solution to have one landing page but also a subdirectory for dalia with one navbar state
 export const NavbarProvider = ({children}) => {
     const [selectedPage, setSelectedPage] = useState("начало"); //where are we navigationwise
     const [isTopOfPage, setIsTopOfPage] = useState(true);
