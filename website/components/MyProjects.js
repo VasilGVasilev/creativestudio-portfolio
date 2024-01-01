@@ -2,8 +2,6 @@ import useMediaQuery from "@/app/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import { playfair } from "@/app/utils/fonts";
 import Link from "next/link";
-import Image from "next/image";
-import { imageLoader } from "@/app/utils/imgLoader";
 
 
 

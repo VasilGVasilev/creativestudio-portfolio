@@ -6,7 +6,6 @@ import MyProjects from "@/components/MyProjects";
 import Investor from "@/components/Investor";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import useMediaQuery from "./hooks/useMediaQuery";
 import { useEffect } from "react";
 import { useNavbarContext } from "./contexts/navbarContext";
 

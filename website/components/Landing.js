@@ -2,8 +2,6 @@ import useMediaQuery from "@/app/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import useModal from "@/app/hooks/useModal";
-import { imageLoader } from "@/app/utils/imgLoader";
-import Image from "next/image";
 import { raleway } from "@/app/utils/fonts";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaFacebookSquare } from "react-icons/fa";

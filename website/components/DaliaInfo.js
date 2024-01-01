@@ -1,4 +1,4 @@
-import { playfair, raleway, roboto } from "@/app/utils/fonts";
+import { roboto } from "@/app/utils/fonts";
 import { motion } from "framer-motion";
 import ImageGallery from "react-image-gallery";
 
