@@ -1,4 +1,3 @@
-import useMediaQuery from "@/app/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import useModal from "@/app/hooks/useModal";
@@ -13,7 +12,6 @@ import { useEffect, useState } from "react";
 
 
 const Landing = () => {
-  const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   const openModal = useModal((state) => state.openModal);
 
   //--------------------------------------------------------- CUSTOM CHANGING BG-IMG

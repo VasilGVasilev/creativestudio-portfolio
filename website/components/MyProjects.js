@@ -1,11 +1,10 @@
-import useMediaQuery from "@/app/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import { playfair } from "@/app/utils/fonts";
 import Link from "next/link";
 
 
 
-const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingYear }) => {
+const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingYear, extraClassName }) => {
   return (
     <motion.div
       className='grid grid-cols-1 lg:grid-cols-3 gap-12'
@@ -19,7 +18,7 @@ const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingY
       }}
     >
       {/* Image */}
-      <div className="lg:col-span-2">
+      <div className={`lg:col-span-2 ${extraClassName}`}>
         <img src={srcImg} alt="project-picture" className="saturate-150" />
       </div>
 
@@ -54,7 +53,6 @@ const Project = ({ url, srcImg, imgW, imgH, projectName, projectDesc, finishingY
 };
 
 const MyProjects = () => {
-  const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section id="проекти" className="py-14 px-5 sm:px-20 bg-white text-black">
       {/* HEADER AND IMAGE SECTION */}
@@ -72,9 +70,8 @@ const MyProjects = () => {
 
         {/* IMAGE */}
 
-        {isAboveLarge ? (
           <div
-            className=""
+            className="hidden lg:block"
           >
             <div className="z-10 max-w-[600px] max-h-[600px]">
               <motion.img
@@ -107,9 +104,6 @@ const MyProjects = () => {
             </div>
 
           </div>
-        ) : (
-          <></>
-        )}
 
       </div>
 
@@ -149,6 +143,7 @@ const MyProjects = () => {
           projectName={'Далия'}
           projectDesc={'Едно бижу в полите на Витоша с уникални гледки към София. Луксозен имот с над 700 кв.м. РЗП и двор от 750 кв.м. в престижния кв. Драгалевци. '}
           finishingYear={'2020 - 2022'}
+          extraClassName="redLineWithText"
         />
 
         {/* West End */}

@@ -8,3 +8,21 @@
 .text-shadow-default {
     text-shadow: 2px 3px 10px #ffffff95;
 }
+
+.redLineWithText {
+    position: relative;
+    opacity: 0.7;
+}
+
+.redLineWithText::after {
+    content: "ПРОДАДЕНО";
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 10px;
+    background-color: red;
+    transform: rotate(35deg);
+    color: white;
+}
