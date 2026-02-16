@@ -110,6 +110,16 @@ const MyProjects = () => {
       {/* PROJECTS */}
       <div className="grid grid-cols-1 justify-center items-center mx-auto gap-10 sm:gap-20 sm:px-20">
 
+        {/* Montierra */}
+        <Project
+          srcImg="/montierra/montierra-one.webp"
+          imgW="5000"
+          imgH="2813"
+          projectName={'Монтиерра Резидънс'}
+          projectDesc={'В очакване на разрешение за строеж - Montierra Luxury Residence – бутиков жилищен проект с луксозни апартаменти в Драгалевци, в полите на Витоша. Модерна архитектура, тишина и природа, съчетани с бърз достъп до града. Дом за хора с усет към качеството и детайла.'}
+          finishingYear={'2026 - 2028'}
+        />
+
         {/* Tilia */}
         <Project
           url="https://tiliabg.com/"
