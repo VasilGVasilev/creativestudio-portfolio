@@ -112,6 +112,7 @@ const MyProjects = () => {
 
         {/* Montierra */}
         <Project
+          url="https://montierrabg.com/"
           srcImg="/montierra/montierra-one.webp"
           imgW="5000"
           imgH="2813"
